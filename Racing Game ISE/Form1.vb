@@ -30,7 +30,7 @@
         If score > 30 Then
             speed = 6
         End If
-        speed_Text.Text = "Speed" & speed
+
         If (Car.Bounds.IntersectsWith(EnemyCar1.Bounds)) Then
             gameover()
         End If
@@ -100,5 +100,4 @@
 
         End If
     End Sub
-
 End Class

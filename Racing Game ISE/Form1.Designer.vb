@@ -44,7 +44,7 @@ Partial Class Form1
         Me.End_Text = New System.Windows.Forms.Label()
         Me.score_Text = New System.Windows.Forms.Label()
         Me.Repaly_Butten = New System.Windows.Forms.Button()
-        Me.speed_Text = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.EnemyCar3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EnemyCar2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EnemyCar1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -236,16 +236,16 @@ Partial Class Form1
         Me.Repaly_Butten.UseVisualStyleBackColor = False
         Me.Repaly_Butten.Visible = False
         '
-        'speed_Text
+        'Label1
         '
-        Me.speed_Text.AutoSize = True
-        Me.speed_Text.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.speed_Text.ForeColor = System.Drawing.SystemColors.Control
-        Me.speed_Text.Location = New System.Drawing.Point(153, 7)
-        Me.speed_Text.Name = "speed_Text"
-        Me.speed_Text.Size = New System.Drawing.Size(64, 16)
-        Me.speed_Text.TabIndex = 15
-        Me.speed_Text.Text = "speed 0"
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label1.Location = New System.Drawing.Point(153, 7)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(64, 16)
+        Me.Label1.TabIndex = 15
+        Me.Label1.Text = "speed 0"
         '
         'Form1
         '
@@ -253,7 +253,7 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkGray
         Me.ClientSize = New System.Drawing.Size(224, 361)
-        Me.Controls.Add(Me.speed_Text)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Repaly_Butten)
         Me.Controls.Add(Me.score_Text)
         Me.Controls.Add(Me.End_Text)
@@ -311,5 +311,5 @@ Partial Class Form1
     Friend WithEvents End_Text As Label
     Friend WithEvents score_Text As Label
     Friend WithEvents Repaly_Butten As Button
-    Friend WithEvents speed_Text As Label
+    Friend WithEvents Label1 As Label
 End Class
