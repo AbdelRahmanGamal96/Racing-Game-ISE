@@ -21,7 +21,28 @@
                 road(x).Top = -road(x).Height
             End If
         Next
+        If score > 10 And score < 20 Then
+            speed = 4
+        End If
+        If score > 20 And score < 30 Then
+            speed = 5
+        End If
+        If score > 30 Then
+            speed = 6
+        End If
+        speed_Text.Text = "Speed" & speed
+        If (Car.Bounds.IntersectsWith(EnemyCar1.Bounds)) Then
+            gameover()
+        End If
+        If (Car.Bounds.IntersectsWith(EnemyCar2.Bounds)) Then
+            gameover()
+        End If
+        If (Car.Bounds.IntersectsWith(EnemyCar3.Bounds)) Then
+            gameover()
+
+        End If
     End Sub
+
 
     Private Sub Form1_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
         If e.KeyCode = Keys.Right Then
@@ -58,4 +79,26 @@
             EnemyCar1.Left = CInt(Math.Ceiling(Rnd() * 50)) + 0
         End If
     End Sub
+    Private Sub Enemy2_Mover_Tick(sender As Object, e As EventArgs) Handles Enemy2_Mover.Tick
+        EnemyCar2.Top += speed * 1
+        If EnemyCar2.Top >= Me.Height Then
+            score += 1
+            Score_Text.Text = "Score " & score
+            EnemyCar2.Top = -(CInt(Math.Ceiling(Rnd() * 150)) + EnemyCar2.Height)
+            EnemyCar2.Left = CInt(Math.Ceiling(Rnd() * 50)) + 80
+        End If
+
+    End Sub
+
+    Private Sub Enemy3_Mover_Tick(sender As Object, e As EventArgs) Handles Enemy3_Mover.Tick
+        EnemyCar3.Top += speed * 2 / 1
+        If EnemyCar3.Top >= Me.Height Then
+            score += 1
+            Score_Text.Text = "Score " & score
+            EnemyCar3.Top = -(CInt(Math.Ceiling(Rnd() * 150)) + EnemyCar3.Height)
+            EnemyCar3.Left = CInt(Math.Ceiling(Rnd() * 40)) + 150
+
+        End If
+    End Sub
+
 End Class

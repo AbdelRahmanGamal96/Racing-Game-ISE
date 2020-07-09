@@ -41,6 +41,10 @@ Partial Class Form1
         Me.Enemy1_Mover = New System.Windows.Forms.Timer(Me.components)
         Me.Enemy2_Mover = New System.Windows.Forms.Timer(Me.components)
         Me.Enemy3_Mover = New System.Windows.Forms.Timer(Me.components)
+        Me.End_Text = New System.Windows.Forms.Label()
+        Me.score_Text = New System.Windows.Forms.Label()
+        Me.Repaly_Butten = New System.Windows.Forms.Button()
+        Me.speed_Text = New System.Windows.Forms.Label()
         CType(Me.EnemyCar3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EnemyCar2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EnemyCar1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -71,7 +75,7 @@ Partial Class Form1
         'EnemyCar3
         '
         Me.EnemyCar3.Image = Global.Racing_Game_ISE.My.Resources.Resources.enemy3
-        Me.EnemyCar3.Location = New System.Drawing.Point(178, 56)
+        Me.EnemyCar3.Location = New System.Drawing.Point(178, 26)
         Me.EnemyCar3.Name = "EnemyCar3"
         Me.EnemyCar3.Size = New System.Drawing.Size(34, 70)
         Me.EnemyCar3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -91,7 +95,7 @@ Partial Class Form1
         'EnemyCar1
         '
         Me.EnemyCar1.Image = Global.Racing_Game_ISE.My.Resources.Resources.enemy1
-        Me.EnemyCar1.Location = New System.Drawing.Point(12, 65)
+        Me.EnemyCar1.Location = New System.Drawing.Point(6, 162)
         Me.EnemyCar1.Name = "EnemyCar1"
         Me.EnemyCar1.Size = New System.Drawing.Size(34, 70)
         Me.EnemyCar1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -195,12 +199,64 @@ Partial Class Form1
         Me.Enemy3_Mover.Enabled = True
         Me.Enemy3_Mover.Interval = 10
         '
+        'End_Text
+        '
+        Me.End_Text.AutoSize = True
+        Me.End_Text.BackColor = System.Drawing.Color.Black
+        Me.End_Text.Font = New System.Drawing.Font("Comic Sans MS", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.End_Text.ForeColor = System.Drawing.Color.Red
+        Me.End_Text.Location = New System.Drawing.Point(32, 99)
+        Me.End_Text.Name = "End_Text"
+        Me.End_Text.Size = New System.Drawing.Size(140, 30)
+        Me.End_Text.TabIndex = 12
+        Me.End_Text.Text = "GAME OVER"
+        Me.End_Text.Visible = False
+        '
+        'score_Text
+        '
+        Me.score_Text.AutoSize = True
+        Me.score_Text.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.score_Text.ForeColor = System.Drawing.SystemColors.Control
+        Me.score_Text.Location = New System.Drawing.Point(3, 9)
+        Me.score_Text.Name = "score_Text"
+        Me.score_Text.Size = New System.Drawing.Size(59, 16)
+        Me.score_Text.TabIndex = 13
+        Me.score_Text.Text = "score 0"
+        '
+        'Repaly_Butten
+        '
+        Me.Repaly_Butten.BackColor = System.Drawing.Color.Black
+        Me.Repaly_Butten.Font = New System.Drawing.Font("Ink Free", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Repaly_Butten.ForeColor = System.Drawing.Color.Red
+        Me.Repaly_Butten.Location = New System.Drawing.Point(68, 138)
+        Me.Repaly_Butten.Name = "Repaly_Butten"
+        Me.Repaly_Butten.Size = New System.Drawing.Size(80, 38)
+        Me.Repaly_Butten.TabIndex = 14
+        Me.Repaly_Butten.Text = " REPLAY"
+        Me.Repaly_Butten.UseVisualStyleBackColor = False
+        Me.Repaly_Butten.Visible = False
+        '
+        'speed_Text
+        '
+        Me.speed_Text.AutoSize = True
+        Me.speed_Text.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.speed_Text.ForeColor = System.Drawing.SystemColors.Control
+        Me.speed_Text.Location = New System.Drawing.Point(153, 7)
+        Me.speed_Text.Name = "speed_Text"
+        Me.speed_Text.Size = New System.Drawing.Size(64, 16)
+        Me.speed_Text.TabIndex = 15
+        Me.speed_Text.Text = "speed 0"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkGray
         Me.ClientSize = New System.Drawing.Size(224, 361)
+        Me.Controls.Add(Me.speed_Text)
+        Me.Controls.Add(Me.Repaly_Butten)
+        Me.Controls.Add(Me.score_Text)
+        Me.Controls.Add(Me.End_Text)
         Me.Controls.Add(Me.EnemyCar3)
         Me.Controls.Add(Me.EnemyCar2)
         Me.Controls.Add(Me.EnemyCar1)
@@ -230,6 +286,7 @@ Partial Class Form1
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -251,4 +308,8 @@ Partial Class Form1
     Friend WithEvents Enemy1_Mover As Timer
     Friend WithEvents Enemy2_Mover As Timer
     Friend WithEvents Enemy3_Mover As Timer
+    Friend WithEvents End_Text As Label
+    Friend WithEvents score_Text As Label
+    Friend WithEvents Repaly_Butten As Button
+    Friend WithEvents speed_Text As Label
 End Class
