@@ -32,6 +32,9 @@ Partial Class Form1
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.RoadMover = New System.Windows.Forms.Timer(Me.components)
+        Me.Car = New System.Windows.Forms.PictureBox()
+        Me.Left_Mover = New System.Windows.Forms.Timer(Me.components)
+        Me.Right_Mover = New System.Windows.Forms.Timer(Me.components)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -40,6 +43,7 @@ Partial Class Form1
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Car, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox1
@@ -119,12 +123,31 @@ Partial Class Form1
         Me.RoadMover.Enabled = True
         Me.RoadMover.Interval = 10
         '
+        'Car
+        '
+        Me.Car.Image = Global.Racing_Game_ISE.My.Resources.Resources.Car
+        Me.Car.Location = New System.Drawing.Point(90, 278)
+        Me.Car.Name = "Car"
+        Me.Car.Size = New System.Drawing.Size(39, 71)
+        Me.Car.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Car.TabIndex = 8
+        Me.Car.TabStop = False
+        '
+        'Left_Mover
+        '
+        Me.Left_Mover.Interval = 10
+        '
+        'Right_Mover
+        '
+        Me.Right_Mover.Interval = 10
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkGray
         Me.ClientSize = New System.Drawing.Size(224, 361)
+        Me.Controls.Add(Me.Car)
         Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.PictureBox8)
         Me.Controls.Add(Me.PictureBox6)
@@ -145,6 +168,7 @@ Partial Class Form1
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Car, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -158,4 +182,7 @@ Partial Class Form1
     Friend WithEvents PictureBox8 As PictureBox
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents RoadMover As Timer
+    Friend WithEvents Car As PictureBox
+    Friend WithEvents Left_Mover As Timer
+    Friend WithEvents Right_Mover As Timer
 End Class

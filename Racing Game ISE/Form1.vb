@@ -22,4 +22,30 @@
             End If
         Next
     End Sub
+
+    Private Sub Form1_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+        If e.KeyCode = Keys.Right Then
+            Right_Mover.Start()
+        End If
+        If e.KeyCode = Keys.Left Then
+            Left_Mover.Start()
+        End If
+    End Sub
+
+    Private Sub Right_Mover_Tick(sender As Object, e As EventArgs) Handles Right_Mover.Tick
+        If (Car.Location.X < 181) Then
+            Car.Left += 5
+        End If
+    End Sub
+
+    Private Sub Left_Mover_Tick(sender As Object, e As EventArgs) Handles Left_Mover.Tick
+        If (Car.Location.X > 2) Then
+            Car.Left -= 5
+        End If
+    End Sub
+
+    Private Sub Form1_KeyUp(sender As Object, e As KeyEventArgs) Handles MyBase.KeyUp
+        Right_Mover.Stop()
+        Left_Mover.Stop()
+    End Sub
 End Class
