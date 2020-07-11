@@ -38,4 +38,19 @@
             Car.Left += 5
         End If
     End Sub
+    Private Sub Left_Mover_Tick(sender As Object, e As EventArgs) Handles Left_Mover.Tick
+        If (Car.Location.X > 2) Then
+            Car.Left -= 5
+        End If
+
+    End Sub
+
+    Private Sub Form1_KeyUp(sender As Object, e As KeyEventArgs) Handles MyBase.KeyUp
+        Right_Mover.Stop()
+        Left_Mover.Stop()
+    End Sub
+
+    Private Sub EnemyCar1_Click(sender As Object, e As EventArgs) Handles EnemyCar1.Click
+
+    End Sub
 End Class

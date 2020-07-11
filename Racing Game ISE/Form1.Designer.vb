@@ -38,6 +38,7 @@ Partial Class Form1
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Car = New System.Windows.Forms.PictureBox()
+        Me.EnemyCar1 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -47,6 +48,7 @@ Partial Class Form1
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Car, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EnemyCar1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'RoadMover
@@ -159,12 +161,23 @@ Partial Class Form1
         Me.Car.TabIndex = 8
         Me.Car.TabStop = False
         '
+        'EnemyCar1
+        '
+        Me.EnemyCar1.Image = Global.Racing_Game_ISE.My.Resources.Resources.enemy1
+        Me.EnemyCar1.Location = New System.Drawing.Point(7, 195)
+        Me.EnemyCar1.Name = "EnemyCar1"
+        Me.EnemyCar1.Size = New System.Drawing.Size(39, 71)
+        Me.EnemyCar1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.EnemyCar1.TabIndex = 9
+        Me.EnemyCar1.TabStop = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkGray
         Me.ClientSize = New System.Drawing.Size(224, 361)
+        Me.Controls.Add(Me.EnemyCar1)
         Me.Controls.Add(Me.Car)
         Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.PictureBox8)
@@ -187,6 +200,7 @@ Partial Class Form1
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Car, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EnemyCar1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -205,4 +219,5 @@ Partial Class Form1
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Car As PictureBox
+    Friend WithEvents EnemyCar1 As PictureBox
 End Class
