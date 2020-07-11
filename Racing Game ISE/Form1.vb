@@ -22,6 +22,22 @@
                 road(x).Top = -road(x).Height
             End If
         Next
+        If score > 10 And score < 20 Then
+            speed = 4
+        End If
+        If score > 20 And score < 30 Then
+            speed = 5
+        End If
+        If score > 30 Then
+            speed = 6
+        End If
+        Speed_Text.Text = "Speed" & speed
+
+        If (Car.Bounds.IntersectsWith(EnemyCar1.Bounds)) Then
+            gameover()
+
+
+        End If
     End Sub
 
     Private Sub Form1_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
