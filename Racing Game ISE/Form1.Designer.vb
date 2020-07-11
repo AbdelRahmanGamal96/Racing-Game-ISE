@@ -40,6 +40,7 @@ Partial Class Form1
         Me.Car = New System.Windows.Forms.PictureBox()
         Me.EnemyCar1 = New System.Windows.Forms.PictureBox()
         Me.Speed_Text = New System.Windows.Forms.Label()
+        Me.Score_Text = New System.Windows.Forms.Label()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -181,12 +182,22 @@ Partial Class Form1
         Me.Speed_Text.TabIndex = 10
         Me.Speed_Text.Text = "speed 0"
         '
+        'Score_Text
+        '
+        Me.Score_Text.AutoSize = True
+        Me.Score_Text.Location = New System.Drawing.Point(1, 9)
+        Me.Score_Text.Name = "Score_Text"
+        Me.Score_Text.Size = New System.Drawing.Size(47, 13)
+        Me.Score_Text.TabIndex = 11
+        Me.Score_Text.Text = " Score 0"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkGray
         Me.ClientSize = New System.Drawing.Size(224, 361)
+        Me.Controls.Add(Me.Score_Text)
         Me.Controls.Add(Me.Speed_Text)
         Me.Controls.Add(Me.EnemyCar1)
         Me.Controls.Add(Me.Car)
@@ -233,4 +244,5 @@ Partial Class Form1
     Friend WithEvents Car As PictureBox
     Friend WithEvents EnemyCar1 As PictureBox
     Friend WithEvents Speed_Text As Label
+    Friend WithEvents Score_Text As Label
 End Class
