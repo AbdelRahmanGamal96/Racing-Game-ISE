@@ -78,7 +78,7 @@
         Left_Mover.Stop()
     End Sub
 
-    Private Sub EnemyCar1_Click(sender As Object, e As EventArgs) Handles EnemyCar1.Click
+    Private Sub EnemyCar1_Click(sender As Object, e As EventArgs) Handles EnemyCar1.Click, Enemy1_Mover.Tick
         EnemyCar1.Top += speed
         If EnemyCar1.Top >= Me.Height Then
             score += 1
@@ -88,7 +88,7 @@
         End If
     End Sub
 
-    Private Sub EnemyCar2_Click(sender As Object, e As EventArgs) Handles EnemyCar2.Click
+    Private Sub EnemyCar2_Click(sender As Object, e As EventArgs) Handles EnemyCar2.Click, Enemy2_Mover.Tick
         EnemyCar2.Top += speed * 1
         If EnemyCar2.Top >= Me.Height Then
             score += 1
@@ -98,7 +98,7 @@
         End If
     End Sub
 
-    Private Sub EnemyCar3_Click(sender As Object, e As EventArgs) Handles EnemyCar3.Click
+    Private Sub EnemyCar3_Click(sender As Object, e As EventArgs) Handles EnemyCar3.Click, Enemy3_Mover.Tick
         EnemyCar3.Top += speed * 2 / 1
         If EnemyCar3.Top >= Me.Height Then
             score += 1

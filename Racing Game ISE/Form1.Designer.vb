@@ -228,6 +228,7 @@ Partial Class Form1
         Me.End_Text.Size = New System.Drawing.Size(115, 28)
         Me.End_Text.TabIndex = 14
         Me.End_Text.Text = "GAME OVER"
+        Me.End_Text.Visible = False
         '
         'Repaly_Butten
         '
@@ -240,6 +241,7 @@ Partial Class Form1
         Me.Repaly_Butten.Size = New System.Drawing.Size(70, 23)
         Me.Repaly_Butten.TabIndex = 15
         Me.Repaly_Butten.Text = "REPLAY"
+        Me.Repaly_Butten.Visible = False
         '
         'Form1
         '
