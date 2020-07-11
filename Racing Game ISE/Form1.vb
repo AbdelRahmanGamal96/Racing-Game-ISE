@@ -32,6 +32,24 @@
             speed = 6
         End If
         Speed_Text.Text = "Speed" & speed
+        If (Car.Bounds.IntersectsWith(EnemyCar1.Bounds)) Then
+            gameover()
+        End If
+        If (Car.Bounds.IntersectsWith(EnemyCar2.Bounds)) Then
+            gameover()
+        End If
+        If (Car.Bounds.IntersectsWith(EnemyCar3.Bounds)) Then
+            gameover()
+
+        End If
+    End Sub
+    Private Sub gameover()
+        'Repaly_Butten.Visible = True
+        End_Text.Visible = True
+        RoadMover.Stop()
+        Enemy1_Mover.Stop()
+        Enemy2_Mover.Stop()
+        Enemy3_Mover.Stop()
     End Sub
 
     Private Sub Form1_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
