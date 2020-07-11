@@ -32,12 +32,6 @@
             speed = 6
         End If
         Speed_Text.Text = "Speed" & speed
-
-        If (Car.Bounds.IntersectsWith(EnemyCar1.Bounds)) Then
-            gameover()
-
-
-        End If
     End Sub
 
     Private Sub Form1_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Form1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.RoadMover = New System.Windows.Forms.Timer(Me.components)
@@ -39,6 +39,7 @@ Partial Class Form1
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Car = New System.Windows.Forms.PictureBox()
         Me.EnemyCar1 = New System.Windows.Forms.PictureBox()
+        Me.Speed_Text = New System.Windows.Forms.Label()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -171,12 +172,22 @@ Partial Class Form1
         Me.EnemyCar1.TabIndex = 9
         Me.EnemyCar1.TabStop = False
         '
+        'Speed_Text
+        '
+        Me.Speed_Text.AutoSize = True
+        Me.Speed_Text.Location = New System.Drawing.Point(170, 9)
+        Me.Speed_Text.Name = "Speed_Text"
+        Me.Speed_Text.Size = New System.Drawing.Size(45, 13)
+        Me.Speed_Text.TabIndex = 10
+        Me.Speed_Text.Text = "speed 0"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkGray
         Me.ClientSize = New System.Drawing.Size(224, 361)
+        Me.Controls.Add(Me.Speed_Text)
         Me.Controls.Add(Me.EnemyCar1)
         Me.Controls.Add(Me.Car)
         Me.Controls.Add(Me.PictureBox4)
@@ -202,6 +213,7 @@ Partial Class Form1
         CType(Me.Car, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EnemyCar1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents RoadMover As Timer
@@ -220,4 +232,5 @@ Partial Class Form1
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Car As PictureBox
     Friend WithEvents EnemyCar1 As PictureBox
+    Friend WithEvents Speed_Text As Label
 End Class
