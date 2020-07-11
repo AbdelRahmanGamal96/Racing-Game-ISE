@@ -69,4 +69,14 @@
             EnemyCar1.Left = CInt(Math.Ceiling(Rnd() * 50)) + 0
         End If
     End Sub
+
+    Private Sub EnemyCar2_Click(sender As Object, e As EventArgs) Handles EnemyCar2.Click
+        EnemyCar2.Top += speed * 1
+        If EnemyCar2.Top >= Me.Height Then
+            score += 1
+            Score_Text.Text = "Score " & score
+            EnemyCar2.Top = -(CInt(Math.Ceiling(Rnd() * 150)) + EnemyCar2.Height)
+            EnemyCar2.Left = CInt(Math.Ceiling(Rnd() * 50)) + 80
+        End If
+    End Sub
 End Class
