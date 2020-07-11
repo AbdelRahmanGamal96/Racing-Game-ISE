@@ -44,7 +44,7 @@
         End If
     End Sub
     Private Sub gameover()
-        'Repaly_Butten.Visible = True
+        Repaly_Butten.Visible = True
         End_Text.Visible = True
         RoadMover.Stop()
         Enemy1_Mover.Stop()
@@ -107,5 +107,12 @@
             EnemyCar3.Left = CInt(Math.Ceiling(Rnd() * 40)) + 150
 
         End If
+    End Sub
+
+    Private Sub Repaly_Butten_Click(sender As Object, e As EventArgs) Handles Repaly_Butten.Click
+        score = 0
+        Me.Controls.Clear()
+        InitializeComponent()
+        Form1_Load(e, e)
     End Sub
 End Class

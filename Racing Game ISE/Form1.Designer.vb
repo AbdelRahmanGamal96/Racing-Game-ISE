@@ -44,6 +44,7 @@ Partial Class Form1
         Me.EnemyCar2 = New System.Windows.Forms.PictureBox()
         Me.EnemyCar3 = New System.Windows.Forms.PictureBox()
         Me.End_Text = New System.Windows.Forms.Label()
+        Me.Repaly_Butten = New System.Windows.Forms.Label()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -228,12 +229,25 @@ Partial Class Form1
         Me.End_Text.TabIndex = 14
         Me.End_Text.Text = "GAME OVER"
         '
+        'Repaly_Butten
+        '
+        Me.Repaly_Butten.AutoSize = True
+        Me.Repaly_Butten.BackColor = System.Drawing.Color.Black
+        Me.Repaly_Butten.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Repaly_Butten.ForeColor = System.Drawing.Color.Red
+        Me.Repaly_Butten.Location = New System.Drawing.Point(68, 142)
+        Me.Repaly_Butten.Name = "Repaly_Butten"
+        Me.Repaly_Butten.Size = New System.Drawing.Size(70, 23)
+        Me.Repaly_Butten.TabIndex = 15
+        Me.Repaly_Butten.Text = "REPLAY"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkGray
         Me.ClientSize = New System.Drawing.Size(224, 361)
+        Me.Controls.Add(Me.Repaly_Butten)
         Me.Controls.Add(Me.End_Text)
         Me.Controls.Add(Me.EnemyCar3)
         Me.Controls.Add(Me.EnemyCar2)
@@ -290,4 +304,5 @@ Partial Class Form1
     Friend WithEvents EnemyCar2 As PictureBox
     Friend WithEvents EnemyCar3 As PictureBox
     Friend WithEvents End_Text As Label
+    Friend WithEvents Repaly_Butten As Label
 End Class
